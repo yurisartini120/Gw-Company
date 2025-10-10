@@ -1,98 +1,69 @@
-// ====== Alternar abas Login / Cadastro ======
 const tabs = document.querySelectorAll(".tab");
-const forms = document.querySelectorAll(".auth-form");
+const formSlider = document.querySelector(".form-slider");
+const formLogin = document.getElementById("formLogin");
+const formCadastro = document.getElementById("formCadastro");
 
-tabs.forEach((tab) => {
+// alternar abas com animação
+tabs.forEach(tab => {
   tab.addEventListener("click", () => {
-    tabs.forEach((t) => t.classList.remove("active"));
-    forms.forEach((f) => f.classList.remove("active"));
-
+    tabs.forEach(t => t.classList.remove("active"));
     tab.classList.add("active");
-    const target = tab.dataset.tab;
-    document.getElementById("form" + target.charAt(0).toUpperCase() + target.slice(1)).classList.add("active");
+
+    if (tab.dataset.tab === "cadastro") {
+      formSlider.style.transform = "translateX(-50%)";
+    } else {
+      formSlider.style.transform = "translateX(0)";
+    }
   });
 });
 
-// ====== Entrar com CPF ======
-const loginCpfLink = document.getElementById("loginCpfLink");
-const voltarLogin = document.getElementById("voltarLogin");
-const formLogin = document.getElementById("formLogin");
-const formCpf = document.getElementById("formCpf");
-
-if (loginCpfLink) {
-  loginCpfLink.addEventListener("click", (e) => {
-    e.preventDefault();
-    formLogin.classList.remove("active");
-    formCpf.classList.remove("hidden");
-    formCpf.classList.add("active");
-  });
-}
-
-if (voltarLogin) {
-  voltarLogin.addEventListener("click", (e) => {
-    e.preventDefault();
-    formCpf.classList.remove("active");
-    formLogin.classList.add("active");
-  });
-}
-
-// ====== Máscaras simples (CPF e telefone) ======
+// máscaras de CPF e telefone
 function maskCPF(value) {
-  return value
-    .replace(/\D/g, "")
+  return value.replace(/\D/g, "")
     .replace(/(\d{3})(\d)/, "$1.$2")
     .replace(/(\d{3})(\d)/, "$1.$2")
     .replace(/(\d{3})(\d{1,2})$/, "$1-$2");
 }
-
 function maskPhone(value) {
-  return value
-    .replace(/\D/g, "")
+  return value.replace(/\D/g, "")
     .replace(/(\d{2})(\d)/, "($1) $2")
     .replace(/(\d{5})(\d{4})/, "$1-$2")
     .slice(0, 15);
 }
 
-document.getElementById("cpf")?.addEventListener("input", (e) => {
-  e.target.value = maskCPF(e.target.value);
-});
-document.getElementById("telefone")?.addEventListener("input", (e) => {
-  e.target.value = maskPhone(e.target.value);
-});
-document.getElementById("cpfLogin")?.addEventListener("input", (e) => {
-  e.target.value = maskCPF(e.target.value);
-});
+document.getElementById("cpf")?.addEventListener("input", e => e.target.value = maskCPF(e.target.value));
+document.getElementById("telefone")?.addEventListener("input", e => e.target.value = maskPhone(e.target.value));
 
-// ====== Simulação de login/cadastro ======
-document.getElementById("formCadastro")?.addEventListener("submit", (e) => {
+// cadastro
+formCadastro.addEventListener("submit", e => {
   e.preventDefault();
-  const nome = document.getElementById("nome").value;
-  const email = document.getElementById("email").value;
-  const senha = document.getElementById("senha").value;
+  const nome = nome.value.trim();
+  const email = email.value.trim();
+  const senha = senha.value.trim();
+  const cpf = document.getElementById("cpf").value;
+  const telefone = document.getElementById("telefone").value;
 
-  if (!nome || !email || !senha) return alert("Preencha todos os campos!");
-  alert(`Conta criada com sucesso! Bem-vindo(a), ${nome}.`);
-  localStorage.setItem("usuarioGW", JSON.stringify({ nome, email }));
+  if (!nome || !email || !senha || !cpf || !telefone) {
+    alert("Preencha todos os campos!");
+    return;
+  }
+
+  localStorage.setItem("usuarioGW", JSON.stringify({ nome, email, senha, cpf, telefone }));
+  alert(`Conta criada com sucesso! Bem-vindo(a), ${nome}`);
   window.location.href = "servicos.html";
 });
 
-document.getElementById("formLogin")?.addEventListener("submit", (e) => {
+// login
+formLogin.addEventListener("submit", e => {
   e.preventDefault();
-  const email = document.getElementById("loginEmail").value;
-  const senha = document.getElementById("loginSenha").value;
+  const email = document.getElementById("loginEmail").value.trim();
+  const senha = document.getElementById("loginSenha").value.trim();
   const user = JSON.parse(localStorage.getItem("usuarioGW"));
-  if (user && user.email === email) {
-    alert("Login efetuado com sucesso!");
+
+  if (user && user.email === email && user.senha === senha) {
+    alert(`Bem-vindo(a) de volta, ${user.nome}!`);
     window.location.href = "servicos.html";
   } else {
-    alert("Usuário não encontrado. Crie uma conta primeiro.");
+    alert("E-mail ou senha incorretos!");
   }
-});
-
-document.getElementById("formCpf")?.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const cpf = document.getElementById("cpfLogin").value;
-  if (cpf.length < 14) return alert("CPF inválido!");
-  alert("Login via CPF realizado com sucesso!");
-  window.location.href = "servicos.html";
 });

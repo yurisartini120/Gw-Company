@@ -1,4 +1,4 @@
-/* ====== AUTH PAGE STYLE (Cadastro/Login) ====== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 body.auth-page {
   margin: 0;
@@ -17,19 +17,17 @@ body.auth-page {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ====== HEADER ====== */
+/* ===== HEADER ===== */
 .auth-header {
   text-align: center;
   margin-top: 40px;
 }
 .auth-header .logo {
   width: 90px;
-  height: auto;
   margin-bottom: 15px;
 }
 .auth-header h1 {
   font-size: 1.8rem;
-  margin-bottom: 5px;
   font-weight: 700;
 }
 .auth-header p {
@@ -37,20 +35,21 @@ body.auth-page {
   font-size: 0.95rem;
 }
 
-/* ====== CONTAINER ====== */
+/* ===== CONTAINER ===== */
 .auth-container {
+  position: relative;
   width: 100%;
-  max-width: 420px;
+  max-width: 440px;
   background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   margin: 40px auto;
   padding: 30px 25px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(8px);
+  overflow: hidden;
 }
 
-/* ====== TABS ====== */
+/* ===== TABS ===== */
 .auth-tabs {
   display: flex;
   justify-content: space-between;
@@ -72,20 +71,24 @@ body.auth-page {
   border-bottom: 2px solid #a855f7;
 }
 
-/* ====== FORMS ====== */
+/* ===== FORM SLIDER ===== */
+.form-wrapper {
+  overflow: hidden;
+}
+.form-slider {
+  display: flex;
+  width: 200%;
+  transition: transform 0.6s ease-in-out;
+}
 .auth-form {
-  display: none;
+  width: 50%;
+  display: flex;
   flex-direction: column;
   gap: 15px;
-}
-.auth-form.active {
-  display: flex;
+  text-align: left;
 }
 
-.input-group {
-  display: flex;
-  flex-direction: column;
-}
+/* ===== CAMPOS ===== */
 .input-group label {
   font-size: 0.9rem;
   margin-bottom: 5px;
@@ -106,7 +109,19 @@ body.auth-page {
   background: rgba(255, 255, 255, 0.15);
 }
 
-/* ====== BUTTONS ====== */
+/* ===== CPF LINK ===== */
+.cpf-link {
+  text-align: right;
+  font-size: 0.8rem;
+  color: #c9aaffb9;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.cpf-link:hover {
+  color: #fff;
+}
+
+/* ===== BUTTON ===== */
 .btn {
   background: linear-gradient(90deg, #a855f7, #9333ea);
   border: none;
@@ -122,24 +137,7 @@ body.auth-page {
   box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
 }
 
-.extra-options,
-.back-link {
-  text-align: right;
-}
-.extra-options a,
-.back-link {
-  color: #d1b3ff;
-  font-size: 0.85rem;
-  text-decoration: none;
-  transition: 0.3s;
-}
-.extra-options a:hover,
-.back-link:hover {
-  color: #fff;
-  text-decoration: underline;
-}
-
-/* ====== FOOTER ====== */
+/* ===== FOOTER ===== */
 .auth-footer {
   text-align: center;
   padding: 20px;
@@ -147,13 +145,9 @@ body.auth-page {
   color: #bda4ff;
 }
 
-/* ====== RESPONSIVO ====== */
+/* ===== RESPONSIVO ===== */
 @media (max-width: 480px) {
   .auth-container {
     width: 90%;
-    padding: 25px 20px;
-  }
-  .auth-header h1 {
-    font-size: 1.5rem;
   }
 }
