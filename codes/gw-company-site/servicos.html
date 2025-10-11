@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serviços | GW Company</title>
+
+  <!-- Tailwind e Fonte -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS da Página -->
+  <link rel="stylesheet" href="assets/css/servicos.css">
+</head>
+
+<body class="bg-[#120028] text-white font-[Poppins]">
+
+  <!-- Header -->
+  <header class="servicos-header">
+    <div class="logo-area">
+      <img src="assets/img/logo.jpg" alt="Logo GW Company" class="logo">
+      <span>GW COMPANY</span>
+    </div>
+
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="servicos.html" class="ativo">Serviços</a>
+      <a href="checkout.html">Checkout</a>
+      <button id="logoutBtn">Sair</button>
+    </nav>
+  </header>
+
+  <!-- Boas-vindas -->
+  <section class="boas-vindas">
+    <h1>Olá, <span id="nomeUsuario"></span> 👋</h1>
+    <p>Escolha abaixo o tipo de serviço que deseja gerenciar:</p>
+  </section>
+
+  <!-- Cards -->
+  <section class="servicos-container">
+    <div class="servico-card">
+      <h2>Design e Identidade Visual</h2>
+      <p>Criação de logotipos, identidade visual e artes profissionais para redes sociais.</p>
+      <button>Gerenciar</button>
+    </div>
+
+    <div class="servico-card">
+      <h2>Gestão de Mídias</h2>
+      <p>Agendamento de postagens, reels, stories e acompanhamento de resultados.</p>
+      <button>Acessar</button>
+    </div>
+
+    <div class="servico-card">
+      <h2>Análise e Métricas</h2>
+      <p>Acompanhe o desempenho das suas campanhas e receba relatórios automáticos da IA.</p>
+      <button>Ver Relatórios</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="servicos-footer">
+    <p>© 2025 GW Company — Marketing Inteligente para Todos.</p>
+  </footer>
+
+  <!-- Script -->
+  <script src="assets/js/servicos.js"></script>
+</body>
+</html>
