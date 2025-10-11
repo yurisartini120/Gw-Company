@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel | GW Company</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/painel.css" />
+</head>
+<body class="painel-page">
+  
+  <!-- HEADER -->
+  <header class="painel-header">
+    <div class="logo-area">
+      <img src="assets/img/logo.jpg" alt="Logo GW" class="logo" />
+      <span>GW COMPANY</span>
+    </div>
+
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="estilos.html">Estilos</a>
+      <a href="checkout.html">Checkout</a>
+      <button id="logoutBtn">Sair</button>
+    </nav>
+  </header>
+
+  <!-- BOAS-VINDAS -->
+  <section class="boas-vindas">
+    <h1>Olá, <span id="nomeUsuario"></span> 👋</h1>
+    <p>Bem-vindo de volta ao seu painel. Aqui você acompanha tudo sobre seus projetos.</p>
+  </section>
+
+  <!-- RESUMO -->
+  <section class="resumo">
+    <div class="card">
+      <h2>Projetos</h2>
+      <p id="projetosCount">3</p>
+    </div>
+    <div class="card">
+      <h2>Créditos</h2>
+      <p id="creditosUser">2</p>
+    </div>
+    <div class="card">
+      <h2>Último acesso</h2>
+      <p id="ultimoAcesso">11/10/2025</p>
+    </div>
+  </section>
+
+  <!-- AÇÃO -->
+  <section class="acao">
+    <h2>Pronto para criar algo novo?</h2>
+    <button id="criarProjetoBtn">+ Criar novo projeto</button>
+  </section>
+
+  <!-- PROJETOS RECENTES -->
+  <section class="projetos-recentes">
+    <h2>Meus Projetos Recentes</h2>
+    <div class="lista-projetos" id="listaProjetos">
+      <!-- Mock inicial -->
+      <div class="projeto">
+        <h3>Identidade Visual Loja Fit</h3>
+        <p>Status: Em andamento</p>
+      </div>
+      <div class="projeto">
+        <h3>Campanha de Reels Outubro</h3>
+        <p>Status: Concluído</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="painel-footer">
+    <p>© 2025 GW Company — Marketing inteligente e gratuito.</p>
+  </footer>
+
+  <script src="assets/js/painel.js"></script>
+</body>
+</html>

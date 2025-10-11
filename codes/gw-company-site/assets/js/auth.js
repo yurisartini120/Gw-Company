@@ -61,7 +61,7 @@ formCadastro.addEventListener("submit", e => {
   localStorage.setItem("usuarioLogado", JSON.stringify(novoUsuario));
 
   alert(`Conta criada com sucesso! Bem-vindo(a), ${nome}`);
-  window.location.href = "servicos.html";
+  window.location.href = "painel.html";
 });
 
 // ======= LOGIN =======
@@ -84,7 +84,7 @@ formLogin.addEventListener("submit", e => {
   if (loginValido) {
     localStorage.setItem("usuarioLogado", JSON.stringify(user));
     alert(`Bem-vindo(a) de volta, ${user.nome}!`);
-    window.location.href = "servicos.html";
+    window.location.href = "painel.html";
   } else {
     alert("Usuário, e-mail, CPF ou senha incorretos!");
   }
