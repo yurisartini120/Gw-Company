@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Defina o Estilo | GW Company</title>
+  <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="assets/img/logo.png" alt="GW Company">
+      <h1>GW COMPANY</h1>
+    </div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="planos.html">Planos</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="estilos.html" class="active">Estilos</a>
+      <a href="cores.html">Cores</a>
+      <a href="confirmacao.html">Confirmação</a>
+      <a href="painel.html">Painel</a>
+    </nav>
+    <div class="user-info">
+      <span id="userName">Olá, Visitante</span>
+      <span id="userCredits">Créditos: 0</span>
+      <button id="logoutBtn">Sair</button>
+    </div>
+  </header>
+
+  <main class="content">
+    <h2>Defina o estilo da sua marca</h2>
+    <p>Selecione um ou mais estilos. Usaremos isso em posts, vídeos, artes e anúncios.</p>
+
+    <div class="estilos-container" id="estilosContainer">
+      <!-- Estilos gerados pelo JS -->
+    </div>
+
+    <div class="selecao">
+      <div class="cores-box">
+        <h3>Paleta de cores (rápida)</h3>
+        <p>Você poderá definir na próxima etapa.</p>
+        <div class="cores-preview">
+          <div class="cor cor1"></div>
+          <div class="cor cor2"></div>
+          <div class="cor cor3"></div>
+        </div>
+      </div>
+
+      <div class="tipografia-box">
+        <h3>Fonte / Tipografia</h3>
+        <p>Selecione um combo sugerido.</p>
+        <div class="fontes">
+          <button class="fonte-btn" data-font="Sans + Sans">Sans + Sans</button>
+          <button class="fonte-btn" data-font="Serif + Sans">Serif + Sans</button>
+          <button class="fonte-btn" data-font="Mono + Sans">Mono + Sans</button>
+          <button class="fonte-btn" data-font="Display + Sans">Display + Sans</button>
+        </div>
+      </div>
+    </div>
+
+    <section class="preview">
+      <h3>Preview</h3>
+      <p>*Prévia baseada nos estilos selecionados.</p>
+      <div class="preview-grid" id="previewGrid">
+        <!-- Imagens de preview aparecem aqui -->
+      </div>
+    </section>
+
+    <div class="buttons">
+      <button id="avancarBtn">Avançar para Cores</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>© GW Company — Marketing inteligente e gratuito.</p>
+  </footer>
+
+  <script src="assets/js/estilos.js"></script>
+</body>
+</html>
