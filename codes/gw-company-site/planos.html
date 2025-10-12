@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meu Plano | GW Company</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/planos.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="planos-header">
+    <div class="logo-area">
+      <img src="assets/img/logo.png" alt="Logo GW" class="logo" />
+      <span>GW COMPANY</span>
+    </div>
+    <nav>
+      <a href="painel.html">Painel</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="checkout.html">Upgrade</a>
+      <a href="index.html">Início</a>
+    </nav>
+  </header>
+
+  <!-- PLANO ATUAL -->
+  <section class="plano-atual">
+    <h1>Seu plano atual</h1>
+    <div class="info-plano">
+      <h2 id="planoNome">Free</h2>
+      <p id="planoDescricao">Você tem 2 créditos por mês para usar gratuitamente.</p>
+      <p><strong>Créditos disponíveis:</strong> <span id="creditosAtuais">2</span></p>
+      <p><strong>Status do pagamento:</strong> <span id="statusPagamento">Não verificado</span></p>
+
+      <div class="botoes">
+        <button id="btnUpgrade">Fazer upgrade</button>
+        <button id="btnDowngrade" class="secundario">Downgrade</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- HISTÓRICO -->
+  <section class="historico">
+    <h2>Histórico de planos</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Plano</th>
+          <th>Data</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="historicoTabela">
+        <tr><td colspan="3">Carregando histórico...</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer class="planos-footer">
+    <p>© 2025 GW Company — Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="assets/js/planos.js"></script>
+</body>
+</html>

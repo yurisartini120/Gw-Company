@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Escolher Plano | GW Company</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/checkout.css" />
+</head>
+<body>
+
+  <header class="checkout-header">
+    <div class="logo-area">
+      <img src="assets/img/logo.png" alt="Logo GW" class="logo" />
+      <span>GW COMPANY</span>
+    </div>
+    <nav>
+      <a href="painel.html">Painel</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="index.html">Início</a>
+    </nav>
+  </header>
+
+  <section class="planos">
+    <h1>Escolha seu plano</h1>
+    <p>Atualize para um plano premium e desbloqueie todos os recursos da plataforma.</p>
+
+    <div class="planos-grid">
+
+      <div class="plano-card free">
+        <h2>Free</h2>
+        <p class="preco">R$ 0/mês</p>
+        <ul>
+          <li>2 créditos por mês</li>
+          <li>Acesso limitado</li>
+          <li>Sem suporte</li>
+        </ul>
+        <button data-plano="Free">Plano atual</button>
+      </div>
+
+      <div class="plano-card basic">
+        <h2>Basic</h2>
+        <p class="preco">R$ 29/mês</p>
+        <ul>
+          <li>20 créditos/mês</li>
+          <li>Suporte básico</li>
+          <li>Acesso padrão</li>
+        </ul>
+        <button data-plano="Basic">Assinar Basic</button>
+      </div>
+
+      <div class="plano-card premium">
+        <h2>Premium</h2>
+        <p class="preco">R$ 59/mês</p>
+        <ul>
+          <li>50 créditos/mês</li>
+          <li>Suporte prioritário</li>
+          <li>Acesso antecipado</li>
+        </ul>
+        <button data-plano="Premium">Assinar Premium</button>
+      </div>
+
+      <div class="plano-card plus">
+        <h2>Plus</h2>
+        <p class="preco">R$ 99/mês</p>
+        <ul>
+          <li>Créditos ilimitados</li>
+          <li>Suporte VIP</li>
+          <li>Funções avançadas</li>
+        </ul>
+        <button data-plano="Plus">Assinar Plus</button>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="checkout-footer">
+    <p>© 2025 GW Company — Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="assets/js/checkout.js"></script>
+</body>
+</html>

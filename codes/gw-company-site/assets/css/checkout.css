@@ -1,0 +1,121 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle at top, #0b011a, #090014, #05000e);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* HEADER */
+.checkout-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 60px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px);
+}
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo {
+  width: 45px;
+  height: 45px;
+  border-radius: 8px;
+}
+.checkout-header span {
+  font-weight: 700;
+  color: #a56dff;
+  letter-spacing: 1px;
+}
+.checkout-header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.checkout-header nav a:hover {
+  color: #a56dff;
+}
+
+/* PLANOS */
+.planos {
+  text-align: center;
+  padding: 80px 20px;
+}
+.planos h1 {
+  font-size: 2.2rem;
+  color: #fff;
+}
+.planos p {
+  color: #bbb;
+  margin-bottom: 50px;
+}
+.planos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.plano-card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  padding: 35px 25px;
+  transition: 0.3s;
+  border: 1px solid transparent;
+}
+.plano-card:hover {
+  transform: translateY(-6px);
+  border-color: #a56dff;
+}
+.plano-card h2 {
+  color: #a56dff;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.plano-card .preco {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.plano-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #ccc;
+  text-align: left;
+  margin-bottom: 25px;
+}
+.plano-card li {
+  margin: 8px 0;
+}
+.plano-card button {
+  background: #a56dff;
+  border: none;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.plano-card button:hover {
+  background: #c084fc;
+}
+.plano-card.free button {
+  background: rgba(255,255,255,0.2);
+  cursor: not-allowed;
+}
+
+/* FOOTER */
+.checkout-footer {
+  text-align: center;
+  color: #999;
+  padding: 40px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
