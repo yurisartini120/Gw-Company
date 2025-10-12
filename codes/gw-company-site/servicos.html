@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Serviços | GW Company</title>
+  <link rel="stylesheet" href="assets/css/servicos.css" />
+  <script defer src="assets/js/servicos.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="assets/img/logo.jpg" alt="Logo" />
+      <span>GW COMPANY</span>
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html">Início</a>
+      <a href="planos.html">Planos</a>
+      <a href="servicos.html" class="active">Serviços</a>
+      <a href="painel.html">Painel</a>
+    </div>
+
+    <div class="user-info">
+      <span>Créditos: <span id="creditos">2</span></span>
+      <button id="btnLogout">Sair</button>
+    </div>
+  </nav>
+
+  <header class="header-servicos">
+    <h1>Nossos Serviços</h1>
+    <p>Escolha a plataforma e veja o que você pode criar agora.</p>
+  </header>
+
+  <section class="filtros">
+    <button class="ativo" data-filter="todas">Todas</button>
+    <button data-filter="instagram">Instagram</button>
+    <button data-filter="tiktok">TikTok</button>
+    <button data-filter="youtube">YouTube</button>
+    <button data-filter="whatsapp">WhatsApp</button>
+    <button data-filter="sites">Sites</button>
+    <button data-filter="tiktokshop">TikTok Shop</button>
+  </section>
+
+  <section class="servicos-container" id="servicosContainer">
+    <!-- Cards serão carregados via JS -->
+  </section>
+
+  <footer>
+    © GW Company — Marketing inteligente e gratuito.
+  </footer>
+</body>
+</html>
