@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmação | GW Company</title>
+  <link rel="stylesheet" href="assets/css/confirmacao.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">
+      <img src="assets/img/logo.jpg" alt="GW Company">
+      <h1>GW COMPANY</h1>
+    </div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="planos.html">Planos</a>
+      <a href="painel.html">Painel</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h2>Confirme sua criação</h2>
+    <p>Confira abaixo as informações escolhidas antes de gerar seu projeto.</p>
+
+    <div class="confirm-box">
+      <h3>Resumo do Projeto</h3>
+      <ul id="resumoProjeto">
+        <li><strong>Serviço:</strong> <span id="servicoEscolhido">—</span></li>
+        <li><strong>Estilo:</strong> <span id="estiloEscolhido">—</span></li>
+        <li><strong>Tipografia:</strong> <span id="tipografiaEscolhida">—</span></li>
+        <li><strong>Paleta de cores:</strong> <span id="coresEscolhidas">—</span></li>
+      </ul>
+    </div>
+
+    <div class="buttons">
+      <button id="btnVoltar">Voltar</button>
+      <button id="btnConfirmar" class="confirmar">Confirmar Criação</button>
+    </div>
+  </main>
+
+  <!-- Animação de Confirmação -->
+  <div id="overlayConfirmacao" class="overlay">
+    <div class="checkmark-container">
+      <div class="checkmark"></div>
+      <p>Criação Confirmada!</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 GW Company — Marketing inteligente e gratuito.</p>
+  </footer>
+
+  <script src="assets/js/confirmacao.js"></script>
+</body>
+</html>
