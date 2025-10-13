@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Escolha suas cores | GW Company</title>
+  <link rel="stylesheet" href="assets/css/cores.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="assets/img/logo.jpg" alt="GW Company" />
+      <h1>GW COMPANY</h1>
+    </div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="planos.html">Planos</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="estilos.html">Estilos</a>
+      <a href="cores.html" class="active">Cores</a>
+      <a href="confirmacao.html">Confirmação</a>
+      <a href="painel.html">Painel</a>
+    </nav>
+    <div class="user-info">
+      <span id="userName">Olá, Visitante</span>
+      <span id="userCredits">Créditos: 0</span>
+      <button id="logoutBtn">Sair</button>
+    </div>
+  </header>
+
+  <main class="content">
+    <h2>Escolha suas cores</h2>
+    <p>Selecione uma paleta pronta ou crie a sua própria combinação.</p>
+
+    <section class="paletas-container" id="paletasContainer">
+      <!-- Paletas prontas geradas pelo JS -->
+    </section>
+
+    <section class="personalizada-box">
+      <h3>Ou crie sua própria paleta</h3>
+      <div class="color-pickers">
+        <input type="color" id="cor1" value="#a46cff">
+        <input type="color" id="cor2" value="#7038ff">
+        <input type="color" id="cor3" value="#00bfff">
+      </div>
+      <button id="btnAplicarPersonalizada">Aplicar Paleta Personalizada</button>
+    </section>
+
+    <section class="preview">
+      <h3>Preview das Cores</h3>
+      <div class="preview-grid" id="previewGrid">
+        <!-- Blocos de cores aparecem aqui -->
+      </div>
+    </section>
+
+    <div class="buttons">
+      <button id="avancarBtn">Avançar para Confirmação</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>© GW Company — Marketing inteligente e gratuito.</p>
+  </footer>
+
+  <script src="assets/js/cores.js"></script>
+</body>
+</html>

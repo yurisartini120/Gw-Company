@@ -35,16 +35,25 @@ function renderCards(lista) {
     container.appendChild(card);
   });
 
-  // Lógica de crédito
+  // Lógica de clique
   document.querySelectorAll('.btn-criar').forEach(btn => {
     btn.addEventListener('click', () => {
-      if (creditos > 0) {
-        creditos--;
-        localStorage.setItem('creditos', creditos);
-        creditosSpan.textContent = creditos;
-        alert('Criação realizada! 1 crédito utilizado.');
+      const index = btn.dataset.index;
+      const servicoSelecionado = servicos[index];
+
+      if (servicoSelecionado.tipo === 'free') {
+        if (creditos > 0) {
+          creditos--;
+          localStorage.setItem('creditos', creditos);
+          creditosSpan.textContent = creditos;
+          localStorage.setItem('servicoSelecionado', servicoSelecionado.nome);
+          window.location.href = 'estilos.html';
+        } else {
+          alert('Você não tem créditos suficientes.');
+        }
       } else {
-        alert('Você não tem créditos suficientes.');
+        localStorage.setItem('servicoSelecionado', servicoSelecionado.nome);
+        window.location.href = 'estilos.html';
       }
     });
   });

@@ -1,23 +1,20 @@
-/* === SERVIÇOS - GW COMPANY === */
-
+/* === Layout geral === */
 body {
-  font-family: 'Poppins', sans-serif;
-  background: radial-gradient(circle at top, #0b011a, #090014, #05000e);
-  color: #fff;
+  background-color: #0d001a;
+  color: #e0cfff;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
 }
 
-/* === NAVBAR === */
-.navbar {
+/* === Cabeçalho === */
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 60px;
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(8px);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  background-color: #18002f;
+  padding: 15px 40px;
+  border-bottom: 1px solid #2e0060;
 }
 
 .logo {
@@ -26,215 +23,153 @@ body {
   gap: 10px;
 }
 
-.logo img {
+.logo-img {
   width: 40px;
   height: 40px;
-  border-radius: 8px;
+  object-fit: contain;
+  border-radius: 6px;
 }
 
-.logo span {
-  font-weight: 700;
-  color: #a56dff;
-  letter-spacing: 1px;
+.logo h1 {
+  font-size: 1.2rem;
+  color: #e0cfff;
+  margin: 0;
 }
 
-.nav-links {
-  display: flex;
-  gap: 25px;
-}
-
-.nav-links a {
-  color: #fff;
+nav a {
+  color: #c9aaff;
   text-decoration: none;
+  margin: 0 15px;
   font-weight: 500;
-  transition: 0.3s;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
-  color: #a56dff;
+nav a.ativo {
+  color: #fff;
+  font-weight: 700;
 }
 
-.user-info {
+.header-right {
   display: flex;
   align-items: center;
   gap: 15px;
-  color: #ccc;
 }
 
 #btnLogout {
-  background: #a56dff;
-  color: #fff;
+  background: #6a0dad;
   border: none;
-  border-radius: 20px;
-  padding: 6px 14px;
-  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: white;
   cursor: pointer;
-  transition: 0.3s;
+  font-weight: 600;
 }
 
-#btnLogout:hover {
-  background: #c084fc;
+/* === Conteúdo principal === */
+main {
+  padding: 40px;
 }
 
-/* === HEADER SERVIÇOS === */
-.header-servicos {
+.intro {
   text-align: center;
-  margin-top: 50px;
+  margin-bottom: 30px;
 }
 
-.header-servicos h1 {
+.intro h2 {
   font-size: 2rem;
   margin-bottom: 10px;
-  color: #fff;
 }
 
-.header-servicos p {
-  color: #b8a9ff;
-  margin-bottom: 40px;
-  font-size: 1rem;
-}
-
-/* === FILTROS === */
 .filtros {
   display: flex;
   justify-content: center;
+  gap: 10px;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .filtros button {
-  background: #1a0b2e;
-  border: 1px solid #a56dff;
-  color: #cdb8ff;
+  background: #2b0054;
+  border: 1px solid #50009c;
+  color: #d9bfff;
   border-radius: 20px;
   padding: 8px 18px;
   cursor: pointer;
   font-weight: 500;
-  transition: all 0.2s;
-}
-
-.filtros button:hover {
-  background: #a56dff;
-  color: #fff;
 }
 
 .filtros button.ativo {
-  background: #7a48ff;
-  color: #fff;
-  border-color: #7a48ff;
+  background: #7a2eff;
+  color: white;
 }
 
-/* === CONTAINER DE SERVIÇOS === */
 .servicos-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 25px;
-  padding: 0 40px 100px;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
-/* === CARD DE SERVIÇO === */
 .servico-card {
-  background: linear-gradient(135deg, #2c0b5a, #3b1e6d);
-  border-radius: 16px;
-  padding: 25px;
-  transition: 0.3s;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  background: #16002e;
+  border-radius: 14px;
+  padding: 20px;
+  border: 1px solid #340064;
+  box-shadow: 0 0 10px rgba(100, 0, 255, 0.1);
+  transition: transform 0.2s ease;
 }
 
 .servico-card:hover {
-  transform: translateY(-6px);
-  border-color: #a56dff;
+  transform: scale(1.03);
 }
 
 .servico-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
   color: #fff;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
 }
 
 .servico-card p {
-  color: #ccc;
-  font-size: 0.9rem;
-  line-height: 1.4;
+  color: #c3a9ff;
+  font-size: 0.95rem;
   margin-bottom: 15px;
 }
 
-.servico-card ul {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 20px;
-  color: #bdb3ff;
-  font-size: 0.85rem;
-}
-
-.servico-card ul li {
-  margin-bottom: 5px;
-}
-
-/* === BADGES === */
 .badge {
-  display: inline-block;
-  font-size: 0.75rem;
-  padding: 3px 8px;
+  background: #400080;
   border-radius: 10px;
-  margin-left: 10px;
+  padding: 3px 8px;
+  font-size: 0.75rem;
+  margin-left: 5px;
 }
 
 .badge.free {
-  background: #1c7f5d;
-  color: #fff;
+  background: #3f0fa1;
 }
 
 .badge.pago {
-  background: #a56dff;
-  color: #fff;
+  background: #8a2be2;
 }
 
-/* === BOTÕES === */
 .btns {
   display: flex;
   justify-content: space-between;
   gap: 10px;
 }
 
-.btns button {
+.btn-criar, .btn-pedir {
   flex: 1;
-  padding: 8px 0;
-  border-radius: 25px;
+  padding: 10px;
+  border-radius: 8px;
   border: none;
   cursor: pointer;
   font-weight: 600;
-  transition: 0.3s;
 }
 
 .btn-criar {
-  background: #a56dff;
-  color: #fff;
-}
-
-.btn-criar:hover {
-  background: #c084fc;
+  background: #7a2eff;
+  color: white;
 }
 
 .btn-pedir {
-  background: rgba(255,255,255,0.15);
-  color: #fff;
-}
-
-.btn-pedir:hover {
-  background: rgba(255,255,255,0.25);
-}
-
-/* === FOOTER === */
-footer {
-  text-align: center;
-  color: #999;
-  padding: 40px 20px;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  margin-top: 80px;
+  background: #310060;
+  color: #c9aaff;
 }

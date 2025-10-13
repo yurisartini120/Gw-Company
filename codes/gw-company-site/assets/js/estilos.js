@@ -12,18 +12,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const userCredits = document.getElementById("userCredits");
   const logoutBtn = document.getElementById("logoutBtn");
 
-  // Carregar usuário logado
+  // === Usuário logado ===
   const user = JSON.parse(localStorage.getItem("usuarioLogado")) || { nome: "Visitante", creditos: 0, plano: "Free" };
   userName.textContent = `Olá, ${user.nome}`;
   userCredits.textContent = `Créditos: ${user.creditos}`;
 
-  // Logout
   logoutBtn.addEventListener("click", () => {
     localStorage.removeItem("usuarioLogado");
     window.location.href = "index.html";
   });
 
-  // Definir limite por plano
+  // === Limite por plano ===
   const limitePorPlano = {
     Free: 1,
     Basic: 2,
@@ -35,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let selecionados = [];
   let tipografia = null;
 
-  // Criar botões de estilos
+  // === Cria botões ===
   estilos.forEach(estilo => {
     const btn = document.createElement("button");
     btn.textContent = estilo;
@@ -57,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
     container.appendChild(btn);
   });
 
-  // Fontes
+  // === Fontes ===
   document.querySelectorAll(".fonte-btn").forEach(btn => {
     btn.addEventListener("click", () => {
       document.querySelectorAll(".fonte-btn").forEach(b => b.classList.remove("active"));
@@ -66,6 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // === Atualizar preview ===
   function atualizarPreview() {
     previewGrid.innerHTML = "";
     if (selecionados.length === 0) {
@@ -81,6 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // === Avançar ===
   avancarBtn.addEventListener("click", () => {
     if (selecionados.length === 0) {
       alert("Selecione ao menos um estilo.");
