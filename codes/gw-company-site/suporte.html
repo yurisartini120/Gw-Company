@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suporte | GW Company</title>
+  <link rel="stylesheet" href="assets/css/suporte.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="assets/img/logo.jpg" alt="GW Company">
+      <h1>GW COMPANY</h1>
+    </div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="planos.html">Planos</a>
+      <a href="painel.html">Painel</a>
+      <a href="suporte.html" class="ativo">Suporte</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h2>Central de Suporte</h2>
+    <p>Escolha abaixo como deseja entrar em contato com nossa equipe:</p>
+
+    <div class="opcoes-suporte">
+      <div class="opcao" id="chatSuporte">
+        💬
+        <h3>Chat no site</h3>
+        <p>Converse com nosso atendimento em tempo real aqui mesmo.</p>
+        <button>Iniciar Chat</button>
+      </div>
+
+      <div class="opcao" id="whatsappSuporte">
+        📱
+        <h3>WhatsApp</h3>
+        <p>Fale com a gente direto no WhatsApp.</p>
+        <button>Abrir WhatsApp</button>
+      </div>
+
+      <div class="opcao" id="emailSuporte">
+        📧
+        <h3>E-mail</h3>
+        <p>Envie uma mensagem para nossa equipe.</p>
+        <button>Enviar E-mail</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Chat embutido -->
+  <div id="chatContainer" class="chat-container">
+    <div class="chat-box">
+      <div class="chat-header">
+        <span>Atendimento GW Company</span>
+        <button id="fecharChat">×</button>
+      </div>
+      <div class="chat-mensagens" id="chatMensagens">
+        <div class="msg-bot">Olá! 👋 Como posso te ajudar hoje?</div>
+      </div>
+      <div class="chat-input">
+        <input type="text" id="chatInput" placeholder="Digite sua mensagem...">
+        <button id="enviarMsg">Enviar</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 GW Company — Marketing inteligente e gratuito.</p>
+  </footer>
+
+  <script src="assets/js/suporte.js"></script>
+</body>
+</html>
